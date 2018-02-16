@@ -9,7 +9,7 @@
 #
 # @author Arne Kamola <arne@kamola.de>
 # @date 2012-12-03
-# @edit 2013-03-09 Arne Kamola <arne@kamola.de>
+# @edit 2018-01-16 Arne Kamola <arne@kamola.de>
 
 # Setup
 
@@ -28,7 +28,7 @@ wget -q -O /tmp/$TAZ_PDF "http://dl.taz.de/taz/shop/download_action.php?model=20
 
 export EMAIL=$EMAIL_SENDER
 
-mutt -s "taz vom "`date +"%d.%m.%Y"` -a /tmp/$TAZ_PDF $EMAIL_RECIEVER < ~/.tazcron.txt
+mutt -s "taz vom "`date +"%d.%m.%Y"` -a /tmp/$TAZ_PDF -- $EMAIL_RECIEVER < ~/.tazcron.txt
 
 # Clean up
 
